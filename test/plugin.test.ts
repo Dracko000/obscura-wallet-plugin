@@ -16,7 +16,7 @@ vi.mock('obscura-sdk', () => ({
 
 describe('Obscura Plugin Middleware', () => {
   beforeAll(() => {
-    // Simulasi private key di localStorage
+    
     vi.stubGlobal('localStorage', {
       getItem: (key: string) => {
         if (key === 'obscura:pk') return '0xabc123...'
@@ -31,7 +31,7 @@ describe('Obscura Plugin Middleware', () => {
       chain: {
         rpcUrls: {
           default: {
-            http: ['https://scroll-sepolia.blockpi.network/v1/rpc/public'],
+            http: ['https://scroll-sepolia.infura.io/v3/8d35b5c2615049d685361e028b7661fe'],
           },
         },
       },
