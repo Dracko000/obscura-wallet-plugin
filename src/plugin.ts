@@ -11,7 +11,7 @@ export function createObscuraMiddleware(options?: GhostMiddlewareOptions) {
     if (request.method !== 'eth_sendTransaction') return null
 
     const tx = request.params[0]
-    const privateKey = localStorage.getItem('obscura:pk') // untuk demo, sebaiknya bukan ini
+    const privateKey = localStorage.getItem('obscura:pk')
 
     if (!privateKey) throw new Error('Private key not found')
 
